@@ -1,0 +1,10 @@
+Destination,Included in Travel Card,Costs,How many times per month
+Home,[GA; bla],[Half-Fare: 38.00; ZVV 9-Pass (alle Zonen): 23.80],2
+Ferienhaus Süd,[GA],[Half-Fare: 70.80],0.25
+Ferienhaus West,[GA],[Half-Fare: 72.20],0.25
+Westschweiz,[GA],[Half-Fare: 74.00],0.1
+Ferienhaus Freund,[GA],[Half-Fare: 62.80],0.16666
+Nahe Zürich,[GA; ZVV 9-Pass Zürich; ZVV 3 Zonen; ZVV 4 Zonen; ZVV 9-Pass (alle Zonen)],[Half-Fare: 6.80],4
+In Zürich,[GA; ZVV 9-Pass Zürich; ZVV 3 Zonen; ZVV 4 Zonen; ZVV 9-Pass (alle Zonen); ZVV 1-2 Zone],[Half-Fare: 6.20],12
+Am See,[GA; ZVV 9-Pass (alle Zonen); ZVV 4 Zonen],[Half-Fare: 8.80; ZVV 9-Pass Zürich: 6.20; ZVV 3 Zonen: 6.20; ZVV 1-2 Zone: 6.20],4
+Morgenzuschlag bei 9-Pass,[GA; ZVV 3 Zonen; ZVV 4 Zonen; ZVV 1-2 Zone; Half-Fare],[Half-Fare: 3.10; ZVV 9-Pass Zürich: 3.10; ZVV 9-Pass (alle Zonen): 3.10],8
