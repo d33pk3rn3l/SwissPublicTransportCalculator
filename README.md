@@ -30,7 +30,7 @@ The notebook leverages two CSV files: `Travel_Cards.csv` and `Travel_routes.csv`
 
   * Consider adding expensive trips even if they occur only once a year, as they could potentially influence the overall cost calculation. However, for minor trips that won't significantly impact the cost, you can choose to omit them.
   
-  * To fetch the latest prices, visit [SBB](beta.sbb.ch), adjust according to your travel cards, and select the furthest stop included within your travel card zone (for instance, choose 'Winterthur' if you have an 'ZVV all zones' card and you're traveling to 'St. Gallen').
+  * To fetch the latest prices, visit [SBB](https://beta.sbb.ch), adjust according to your travel cards, and select the furthest stop included within your travel card zone (for instance, choose 'Winterthur' if you have an 'ZVV all zones' card and you're traveling to 'St. Gallen').
 
 This process may be time-consuming, but it's a crucial step to ensure an accurate calculation of your travel costs.
 
