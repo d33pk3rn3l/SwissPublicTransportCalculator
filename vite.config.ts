@@ -3,9 +3,10 @@ import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/SwissPublicTransportCalculator/' : '/',
   plugins: [react() as any],
   test: {
     globals: true,
   },
-})
+}))

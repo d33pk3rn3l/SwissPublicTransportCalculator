@@ -1,8 +1,13 @@
 # Travel Card Cost Analysis
 
-This repository contains a Jupyter notebook `calculate_travel_cards.ipynb` which analyzes and visualizes the costs of different travel cards based on certain routes and their frequencies. The analysis takes into consideration the cost of the card, the cost per route, and how often a route is travelled in a month.
+This repository contains two ways to explore Swiss public transport card costs:
 
-## Prerequisites
+1. **Jupyter notebook prototype** (`calculate_travel_cards.ipynb`) for data exploration and plotting.
+2. **Vite + React web app** (current service) for interactive use and GitHub Pages deployment.
+
+## Notebook prototype
+
+### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
@@ -10,7 +15,7 @@ Before you begin, ensure you have met the following requirements:
 * You have a basic understanding of Python programming and data analysis concepts.
 * You have installed the following Python libraries: pandas, numpy, matplotlib, and plotly.
 
-## Running the Jupyter Notebook
+### Running the Jupyter Notebook
 
 To run `calculate_travel_cards.ipynb`, follow these steps:
 
@@ -20,7 +25,7 @@ To run `calculate_travel_cards.ipynb`, follow these steps:
 4. Open `calculate_travel_cards.ipynb` in the Jupyter Notebook interface that appears in your web browser.
 5. Execute the notebook cells in order.
 
-## Data
+### Data
 
 The notebook leverages two CSV files: `Travel_Cards.csv` and `Travel_routes.csv`.
 
@@ -35,7 +40,7 @@ The notebook leverages two CSV files: `Travel_Cards.csv` and `Travel_routes.csv`
 This process may be time-consuming, but it's a crucial step to ensure an accurate calculation of your travel costs.
 
 
-## Methodology
+### Methodology
 
 The Jupyter notebook performs the following steps:
 
@@ -45,11 +50,33 @@ The Jupyter notebook performs the following steps:
 * The cumulative costs are calculated and plotted over the year for each travel card.
 * The costs for each route are calculated and plotted for each travel card.
 
-## Results
+### Results
 
 The notebook generates a stacked bar chart showing the annual cost breakdown for each travel card, which is saved as `annual_costs_breakdown.png`. This chart illustrates which travel card offers the best value depending on travel routes and their frequency.
 
 ![Example calculation](annual_costs_breakdown.png)
+
+## Web app (Vite + React)
+
+### Prerequisites
+
+* Node.js 20+
+* npm
+
+### Local development
+
+1. Install dependencies: `npm ci`
+2. Start the dev server: `npm run dev`
+3. Open the URL shown in the terminal.
+
+### Build and preview
+
+* Production build: `npm run build`
+* Preview the production build locally: `npm run preview`
+
+### GitHub Pages deployment
+
+The web app is deployed from the `main` branch via GitHub Actions (`.github/workflows/deploy.yml`). The Vite base path is configured for the repository name, so the app is served from `/SwissPublicTransportCalculator/` on GitHub Pages.
 
 ## Contributing to Travel Card Cost Analysis
 
