@@ -1,0 +1,445 @@
+/* Swiss Public Transport Calculator CSS Design System */
+/* Inspired by the International Typographic Style (Swiss Design) and SBB design guidelines. */
+/* Minimalist, Clean, High-Contrast White Theme. */
+
+:root {
+  /* Core Swiss Colors */
+  --sbb-red: #eb0000;
+  --sbb-red-hover: #c40000;
+  --sbb-black: #111111;
+  --sbb-dark-gray: #2d2d2d;
+  --sbb-gray: #767676;
+  --sbb-light-gray: #e5e5e5;
+  --sbb-off-white: #f9f9f9;
+  --sbb-white: #ffffff;
+  
+  /* UI Semantic Variables */
+  --bg-color: var(--sbb-white);
+  --bg-panel: var(--sbb-off-white);
+  --text-color: var(--sbb-black);
+  --text-muted: var(--sbb-gray);
+  --border-color: var(--sbb-light-gray);
+  --accent-color: var(--sbb-red);
+  --accent-hover: var(--sbb-red-hover);
+  --card-shadow: none; /* Pure flat design */
+  --card-border-radius: 0px; /* Sharp corners for Swiss modernist layout */
+  
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+main.container {
+  flex-grow: 1;
+}
+
+/* Base Styles & Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 2rem;
+}
+
+/* Swiss Grid & Containers */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Typographic Scale (Swiss Design: high contrast, clear sizing) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  border-left: 4px solid var(--sbb-red);
+  padding-left: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-red {
+  color: var(--sbb-red);
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Layout Utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 0.75rem;
+}
+
+/* Swiss Minimalist Panels */
+.swiss-card {
+  background-color: var(--bg-color);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.swiss-card.recommended {
+  border: 2px solid var(--sbb-red);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Interactive Elements & Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--card-border-radius);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+  text-decoration: none;
+  gap: 0.4rem;
+}
+
+.btn-primary {
+  background-color: var(--sbb-red);
+  color: var(--sbb-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--sbb-red-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1.5px solid var(--text-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.btn-danger {
+  background-color: transparent;
+  color: var(--sbb-red);
+  border: 1px solid var(--sbb-red);
+}
+
+.btn-danger:hover {
+  background-color: var(--sbb-red);
+  color: var(--sbb-white);
+}
+
+.btn-small {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-input, .form-select {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  padding: 0.5rem 0.6rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+  outline: none;
+  transition: border-color 0.15s ease;
+  width: 100%;
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--sbb-red);
+}
+
+/* Custom Table Styling */
+.table-container {
+  overflow-x: auto;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 1rem;
+}
+
+.swiss-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.swiss-table th {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  background-color: var(--bg-panel);
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.75rem;
+  border-bottom: 1.5px solid var(--border-color);
+}
+
+.swiss-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  vertical-align: middle;
+}
+
+.swiss-table tr:hover td {
+  background-color: var(--bg-panel);
+}
+
+/* Toggle Switch */
+.switch-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--sbb-light-gray);
+  transition: .15s;
+  border-radius: 22px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .15s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--sbb-red);
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Disclaimer Banner */
+.disclaimer-banner {
+  background-color: var(--sbb-off-white);
+  color: var(--sbb-dark-gray);
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  margin-top: 2rem;
+  line-height: 1.4;
+}
+
+.disclaimer-banner strong {
+  color: var(--sbb-red);
+}
+
+/* SBB Clock Micro-Animation */
+.swiss-clock {
+  width: 40px;
+  height: 40px;
+  border: 2.5px solid var(--text-color);
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--bg-color);
+}
+
+.swiss-clock::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 14px;
+  background-color: var(--text-color);
+  top: 6px;
+  left: 17px;
+  transform-origin: bottom center;
+  animation: clock-spin 12s linear infinite;
+}
+
+.swiss-clock .second-hand {
+  position: absolute;
+  width: 1px;
+  height: 12px;
+  background-color: var(--sbb-red);
+  top: 8px;
+  left: 17.5px;
+  transform-origin: bottom center;
+  animation: clock-spin 1s linear infinite;
+}
+
+.swiss-clock .second-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: var(--sbb-red);
+  border-radius: 50%;
+  top: 6px;
+  left: 16.5px;
+}
+
+@keyframes clock-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Recommendation Badge */
+.recommendation-badge {
+  background-color: var(--sbb-red);
+  color: var(--sbb-white);
+  padding: 0.15rem 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  border-radius: 0px;
+  display: inline-block;
+}
+
+.card-cost-value {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+.card-cost-period {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
